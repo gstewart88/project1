@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-/*
+
  body {
    background: url(https://upload.wikimedia.org/wikipedia/commons/5/51/Night-sky-milky-way-galaxy-astrophotography_-_West_Virginia_-_ForestWander.jpg) no-repeat center center fixed; 
    -webkit-background-size: cover;
@@ -22,4 +22,39 @@
    background-size: cover;
    color: white;
    text-align: center;
- }*/
+ }
+
+ .title {
+    color: black;
+      height: 50px;
+      line-height: 50px;
+      width: 100%;
+      background-color: white;
+      margin-bottom: 20px;
+      top: 0;
+      opacity: 0.5;
+      border: 1px solid blue; 
+ }
+
+ .login {
+  color: black;
+  height: 20px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  opacity: 0.5;
+  border: 1px solid blue; 
+ }
+
+ th {
+  height: 20px;
+  width: 20px;
+  border: 1px solid white; 
+ }
+
+ td {
+  height: 20px;
+  width: 20px;
+  border: 1px solid white; 
+ }

@@ -12,7 +12,7 @@ class Game < ActiveRecord::Base
   end
 
  def make_move(player, square)
-   move = Move.new(player: player, square: square, symbol:  symbol_for_player(player))
+   move = Move.create(player: player, square: square, symbol:  symbol_for_player(player))
    moves << move
  end
 

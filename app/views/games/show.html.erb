@@ -2,12 +2,34 @@
 
 Game #<%= @game.id %>
 </br>
-<%= @game.player1 %> Vs <%= @game.player2 %>
+<%= @game.player1.name %> Vs <%= @game.player2 %>
+</br>
 <%= @game.result %>
 </br>
 <%= @game.board %>
 </br>
 It is <%= @game.whose_turn %>'s turn to play
 </br>
-
+<%= link_to 'Play', edit_game_path %>
+</br>
 <%= link_to 'Back', games_path %>
+</br>
+<table class="tg">
+  <tr>
+    <th class="ttt"><%= @game.board[0] %></th>
+    <th class="ttt"><%= @game.board[1] %></th>
+    <th class="ttt"><%= @game.board[2] %></th>
+  </tr>
+  <tr>
+    <td class="ttt"><%= @game.board[3] %></td>
+    <td class="ttt"><%= @game.board[4] %></td>
+    <td class="ttt"><%= @game.board[5] %></td>
+  </tr>
+  <tr>
+    <td class="ttt"><%= @game.board[6] %></td>
+    <td class="ttt"><%= @game.board[7] %></td>
+    <td class="ttt"><%= @game.board[8] %></td>
+  </tr>
+</table>
+
+<p><%= button_to '', {action: :update, params: {square: 0}}, method: :patch, class: "TTTButton" %></p>
