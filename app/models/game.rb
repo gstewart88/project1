@@ -1,20 +1,14 @@
 class Game < ActiveRecord::Base
-  belongs_to :player1, class_name: "Player"
-  belongs_to :player2, class_name: "Player"
+  belongs_to :player1, class_name: "User"
+  belongs_to :player2, class_name: "User"
   has_many :moves
 
   WINNING_LINES = [ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ]
 
-  def print_board
-  puts(board.each_slice(3).map do |row|
-  row.map { |e| e || ' ' }.join(' | ')
-  end.join("\n---------\n"))
+  def make_move(player, square)
+        Move.create(square: square, symbol: symbol_for_player(player), player: player, game: self)
+        save!
   end
-
- def make_move(player, square)
-   move = Move.create(player: player, square: square, symbol:  symbol_for_player(player))
-   moves << move
- end
 
   def finished?
     winning_game? || drawn_game?
