@@ -1,2 +1,13 @@
-SHOW
-<%= Player.count %> players have played a total of <%= Game.count %> games
+<p id="notice"><%= notice %></p>
+
+Game #<%= @game.id %>
+</br>
+<%= @game.player1 %> Vs <%= @game.player2 %>
+<%= @game.result %>
+</br>
+<%= @game.board %>
+</br>
+It is <%= @game.whose_turn %>'s turn to play
+</br>
+
+<%= link_to 'Back', games_path %>

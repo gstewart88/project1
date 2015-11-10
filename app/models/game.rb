@@ -5,11 +5,11 @@ class Game < ActiveRecord::Base
 
   WINNING_LINES = [ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ]
 
-  # def print_board
-  #   puts(board.each_slice(3).map do |row|
-  #     row.map { |e| e || ' ' }.join(' | ')
-  #   end.join("\n---------\n"))
-  # end
+  def print_board
+  puts(board.each_slice(3).map do |row|
+  row.map { |e| e || ' ' }.join(' | ')
+  end.join("\n---------\n"))
+  end
 
  def make_move(player, square)
    move = Move.new(player: player, square: square, symbol:  symbol_for_player(player))

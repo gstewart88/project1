@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  # before_action :set_game, only: [:show]
+  before_action :set_game, only: [:show]
   before_action :authenticate_user!
 
   def index
@@ -13,8 +13,8 @@ class GamesController < ApplicationController
     @game = Game.new
   end
 
-# private
-#   def set_game
-#       @game = Game.find(params[:id])
-#   end
+private
+  def set_game
+    @game = Game.find(params[:id])
+  end
 end
