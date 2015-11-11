@@ -15,7 +15,7 @@
  */
 
  body {
-/*   background: url(https://upload.wikimedia.org/wikipedia/commons/5/51/Night-sky-milky-way-galaxy-astrophotography_-_West_Virginia_-_ForestWander.jpg) no-repeat center center fixed; 
+/*   background-image: url("http://pre01.deviantart.net/0e40/th/pre/f/2013/299/8/9/stage_two___edo_hot_baths_by_webcat-d6rwb67.jpg");
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -72,6 +72,15 @@
   color: white;
  }
 
- .playeravatar{
-  display: inline;
+ .playeravatar2{
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+ td.no_border {
+  border: none; 
  }
