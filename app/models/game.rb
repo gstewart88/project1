@@ -46,10 +46,6 @@ class Game < ActiveRecord::Base
   #   square < 9 && square > -1 
   # end
 
-  # def continue_from_error
-  #   gets.chomp
-  # end
-
   private
   def winning_game?
     !!WINNING_LINES.detect do |winning_line|

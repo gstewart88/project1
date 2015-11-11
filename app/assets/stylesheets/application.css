@@ -25,16 +25,16 @@
  }
 
  .title {
-    color: black;
-      height: 50px;
-      line-height: 50px;
-      width: 100%;
-      background-color: white;
-      margin-bottom: 20px;
-      margin-top: 0;
-      top: 0;
-      opacity: 0.5;
-      border: 1px solid blue; 
+  color: black;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 20px;
+  margin-top: 0;
+  top: 0;
+  opacity: 0.5;
+  border: 1px solid blue; 
  }
 
  .login {
