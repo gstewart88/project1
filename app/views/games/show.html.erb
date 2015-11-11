@@ -1,24 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<% if @move && @move.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@move.errors.count, "error") %> prohibited this move from being saved:</h2>
-
-    <ul>
-    <% @move.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
-
-Game #<%= @game.id %>
+<h2>Game #<%= @game.id %></h2>
 </br>
 <%= @game.player1.name %> Vs <%= @game.player2.name %>
-</br>
-<%= @game.result %>
-</br>
-<%= @game.board %>
 </br>
 It is <%= @game.whose_turn.name %>'s turn to play
 </br>
@@ -43,3 +27,17 @@ It is <%= @game.whose_turn.name %>'s turn to play
     <td class="ttt"><%= if (@game.board[8] == nil) then button_to '', {action: :update, params: {square: 8}}, method: :patch, class: "TTTButton" else @game.board[8] end %></td>
   </tr>
 </table>
+</br>
+<%= @game.result %>
+</br>
+<% if @move && @move.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@move.errors.count, "error") %> prohibited this move from being saved:</h2>
+
+    <ul>
+    <% @move.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
