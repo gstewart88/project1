@@ -6,11 +6,15 @@ class Game < ActiveRecord::Base
   WINNING_LINES = [ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ]
 
   def make_move(player, square)
-    if player == whose_turn && square != Move.offset(1).last.square then
-        Move.create(square: square, symbol: symbol_for_player(player), player: player, game: self)
-    else 
-    end
-        save!
+    Move.new(square: square, symbol: symbol_for_player(player), player: player, game: self)
+  end
+
+  def square_is_empty?(square)
+    !board[square]
+  end
+
+  def is_players_turn?(player)
+    player == whose_turn
   end
 
   def finished?

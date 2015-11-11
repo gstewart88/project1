@@ -10,8 +10,12 @@ class GamesController < ApplicationController
   end
 
   def update
-    @game.make_move(current_user, params[:square])
-        redirect_to(game_path(@game))
+    @move = @game.make_move(current_user, params[:square])
+    if @move.save
+      redirect_to @game
+    else
+      render :show
+    end
   end
 
   def new
@@ -27,7 +31,7 @@ class GamesController < ApplicationController
   def edit
   end
 
-private
+  private
   def set_game
     @game = Game.find(params[:id])
   end
