@@ -21,7 +21,7 @@
    -o-background-size: cover;
    background-size: cover;*/
    background-color: black;
-   color: white;
+   color: grey;
    text-align: center;
  }
 
@@ -38,18 +38,18 @@
   border: 1px solid blue; 
  }
 
- .login {
+.login {
   color: black;
   height: 20px;
   width: 100%;
-  background-color: white;
+  background-color: grey;
   position: fixed;
   bottom: 0;
-  opacity: 0.5;
   border: 1px solid blue; 
  }
 
  td {
+  color: white;
   height: 20px;
   width: 20px;
   border: 1px solid white; 
@@ -57,7 +57,17 @@
  }
 
  .tg {
+  color: white;
   position: relative;
   margin: 0 auto;
+ }
 
+ table {
+  color: white;
+  margin: 0 auto;
+ }
+
+ a{
+  text-decoration: none;
+  color: white;
  }

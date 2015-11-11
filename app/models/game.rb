@@ -32,6 +32,13 @@ class Game < ActiveRecord::Base
     end
   end
 
+  def winner
+    case
+    when winning_game?
+      moves.last.player.name
+    end
+  end
+
   def whose_turn
     return player1 if moves.empty?
     moves.last.player == player1 ? player2 : player1
@@ -48,10 +55,6 @@ class Game < ActiveRecord::Base
   def empty_board
     Array.new(9,nil)
   end
-
-  # def acceptable_move?(square)
-  #   square < 9 && square > -1 
-  # end
 
   private
   def winning_game?
