@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 <h2>Game #<%= @game.id %></h2>
 </br>
+<div class="playeravatar"><%= image_tag @game.player1.avatar.thumb.url %></div>
+<div class="playeravatar"><%= image_tag @game.player2.avatar.thumb.url %></div>
+</br>
 <%= @game.player1.name %> Vs <%= @game.player2.name %>
 </br>
 It is <%= @game.whose_turn.name %>'s turn to play

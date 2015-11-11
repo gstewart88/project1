@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+gem 'rmagick'
+gem 'carrierwave'
 gem 'cancancan'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
