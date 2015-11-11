@@ -18,6 +18,10 @@ class GamesController < ApplicationController
     @game = Game.new
   end
 
+  def create
+    @game.player1 = current_user
+  end
+
   def edit
   end
 
