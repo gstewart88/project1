@@ -2,13 +2,13 @@
 
 Game #<%= @game.id %>
 </br>
-<%= @game.player1.name %> Vs <%= @game.player2 %>
+<%= @game.player1.name %> Vs <%= @game.player2.name %>
 </br>
 <%= @game.result %>
 </br>
 <%= @game.board %>
 </br>
-It is <%= @game.whose_turn %>'s turn to play
+It is <%= @game.whose_turn.name %>'s turn to play
 </br>
 <%= link_to 'Play', edit_game_path %>
 </br>

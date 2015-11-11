@@ -19,7 +19,9 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game.player1 = current_user
+    Game.create!(player1: User.first, player2: User.last)
+    # redirect_to :back
+    redirect_to action: "show", id: Game.last.id
   end
 
   def edit
