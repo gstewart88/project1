@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151111165036) do
+ActiveRecord::Schema.define(version: 20151116130121) do
+
+  create_table "characters", force: :cascade do |t|
+    t.string "playgif"
+    t.string "movegif"
+    t.string "victorypose"
+    t.string "name"
+  end
 
   create_table "games", force: :cascade do |t|
     t.integer  "player1_id"
     t.integer  "player2_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "character_id"
   end
 
   create_table "moves", force: :cascade do |t|

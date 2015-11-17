@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-<h2>Game #<%= @game.id %></h2>
+<h2>Tic Tac Toe</h2>
 </br>
-</br>
+<p class="gamedetails">
 <%= @game.player1.name %> Vs <%= @game.player2.name %>
 </br>
 It is <%= @game.whose_turn.name %>'s turn to play
@@ -9,10 +9,17 @@ It is <%= @game.whose_turn.name %>'s turn to play
 <%= link_to 'Play', edit_game_path %>
 </br>
 <%= link_to 'Back', games_path %>
+</p>
+</br>
+<style type="text/css">.playerbutton{cursor:pointer;border:none;background:transparent;outline:none;display:inline}.gaf210codes_youtubebox,.preload_box{width:1px;height:1px;overflow:hidden;visibility:hidden;position:absolute;display:inline}</style>
+<script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+<script type="text/javascript">function toggleButtonPlayer_VlSZY(buttonobj){buttonobj.style.display="none";if(buttonobj.id=="gaf210codes-VlSZY-playbutton"){document.getElementById("gaf210codes-VlSZY-pausebutton").style.display="inline";}else{document.getElementById("gaf210codes-VlSZY-playbutton").style.display="inline";}}/*Youtube player code generated @ http://gaf210.imvustylez.net*/</script>
+<div class="gaf210codes_youtubebox"><iframe width="250" height="250" src="http://www.youtube.com/embed/JGw8DWctAts?enablejsapi=1&amp;fs=0&amp;rel=0&amp;showinfo=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;controls=0&amp;autoplay=0&amp;loop=0" onload="gaf210codes_VlSZY=new YT.Player(this)"></iframe></div>
+<button type="button" class="playerbutton" id="gaf210codes-VlSZY-playbutton" onclick="gaf210codes_VlSZY.playVideo();toggleButtonPlayer_VlSZY(this)"><img src="http://i62.tinypic.com/axnot0.jpg"></button><button type="button" class="playerbutton" id="gaf210codes-VlSZY-pausebutton" onclick="gaf210codes_VlSZY.pauseVideo();toggleButtonPlayer_VlSZY(this)" style="display:none"><img src="http://i57.tinypic.com/2mqugw2.jpg"></button><div class="preload_box"><img src="http://i62.tinypic.com/axnot0.jpg"><img src="http://i57.tinypic.com/2mqugw2.jpg"></div><input style="outline:none" type="range" min="0" max="100" onchange="gaf210codes_VlSZY.setVolume(this.value)">
 </br>
 <table class="page">
   <tr>
-    <td class="no_border"><div class="playeravatar"><%= image_tag @game.player1.avatar.thumb.url %></div></td>
+    <td class="no_border"><div class="playeravatar"><%= image_tag @game.player1.avatar.medium.url %></div></td>
     <td class="no_border">
       <table class="tg">
         <tr>
@@ -32,7 +39,7 @@ It is <%= @game.whose_turn.name %>'s turn to play
         </tr>
       </table>
     </td>
-    <td class="no_border"><div class="playeravatar2"><%= image_tag @game.player2.avatar.thumb.url %></div></td>
+    <td class="no_border"><div class="playeravatar2"><%= image_tag @game.player2.avatar.medium.url %></div></td>
   </tr>
 </table>
 </br>
