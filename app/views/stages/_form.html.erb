@@ -1,0 +1,11 @@
+<%= form_for(@stage) do |f| %>
+<%= f.label :name, 'Stage Name:' %>
+<%= f.text_field :name %>
+<div class="field">
+  <%= f.label :stage_image %><br />
+  <%= f.file_field :stage_image %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>

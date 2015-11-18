@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117133631) do
+ActiveRecord::Schema.define(version: 20151118112135) do
 
   create_table "characters", force: :cascade do |t|
     t.string "playgif"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20151117133631) do
     t.integer  "character_id"
     t.integer  "player1_character_id"
     t.integer  "player2_character_id"
+    t.integer  "stage_id"
   end
 
   create_table "moves", force: :cascade do |t|
@@ -43,6 +44,11 @@ ActiveRecord::Schema.define(version: 20151117133631) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "stages", force: :cascade do |t|
+    t.string "name"
+    t.string "stage_image"
   end
 
   create_table "users", force: :cascade do |t|

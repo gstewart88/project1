@@ -1,0 +1,10 @@
+  <p id="notice"><%= notice %></p>
+
+  <h2><%= @stage.name %></h2>
+  <%= link_to 'Edit', edit_stage_path(@stage) %> |
+  <%= link_to 'Back', stages_path %>
+    <br>
+    <p>
+      <b>Image:</b>
+      <%= link_to image_tag(@stage.stage_image.thumb.url), @stage.stage_image.medium.url %>
+    </p>

@@ -1,0 +1,10 @@
+<nav class ="box">
+  <ul>
+    <li><%= stage.name %></li>
+    <li> <%= link_to image_tag(stage.stage_image.thumb.url), stage.stage_image.medium.url %></li>
+    <li><%= link_to("Show #{stage.name}", stage_path(stage)) %></li>
+    <li><%= link_to("Edit Stage", edit_stage_path(stage)) %></li>
+    <li><%= button_to('Delete Stage', stage_path(stage), method: :delete, data:{confirm: "Delete Them? Are you sure?"}) %></li>
+    
+  </ul>
+</nav>
