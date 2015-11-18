@@ -1,8 +1,9 @@
 class Game < ActiveRecord::Base
   belongs_to :player1, class_name: "User"
   belongs_to :player2, class_name: "User"
-  has_many :characters
   has_many :moves
+  belongs_to :player1_character, class_name: "Character"
+  belongs_to :player2_character, class_name: "Character"
 
   WINNING_LINES = [ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ]
 

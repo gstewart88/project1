@@ -39,4 +39,4 @@ class GamesController < ApplicationController
     params.require(:game).permit(:id)
   end
   
-  end
+end

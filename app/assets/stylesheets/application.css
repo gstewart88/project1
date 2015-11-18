@@ -14,6 +14,12 @@
  *= require_self
  */
 
+/* http://img04.deviantart.net/07fc/i/2013/329/2/4/ryu_s_stage_by_kintsao-d6vkm3a.jpg*/
+/*http://i.imgur.com/hdEFd.jpg*/
+/*http://cdn.visualnews.com/wp-content/uploads/2013/05/Fighting-Game-Background-GIFs-28.gif
+http://www.nag.co.za/wp-content/uploads/2013/04/6VFWhnV.gif*/
+/*https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2542291/q1V4f5CmWiTBPSL/Guile_Stage.jpg*/
+
 .gamedetails {
   background-color: white;
   width: 50%;
@@ -31,6 +37,8 @@
    background-color: black;
    color: black;
    text-align: center;
+   background-repeat: no-repeat;
+   background-position: center;
  }
 
  .title {
@@ -56,8 +64,10 @@
   background-color: grey;
   position: fixed;
   bottom: 0;
+  opacity: 0.9;
   border: 1px solid blue; 
   font-family: "Impact", Times, serif;
+  text-align: left;
  }
 
  td {
@@ -92,8 +102,8 @@
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
-
 }
+
 
  td.no_border {
   border: none; 
@@ -101,10 +111,10 @@
 
  @font-face {
   font-family: sf;
-  src: url('/fonts/sf.ttf');
+  src: url('fonts/sf.ttf');
 }
 
 h2 {
-  font-family: sf;
+  font-family: 'Indie Flower', cursive;
   color: red;
 }

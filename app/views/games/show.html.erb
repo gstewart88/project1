@@ -6,8 +6,6 @@
 </br>
 It is <%= @game.whose_turn.name %>'s turn to play
 </br>
-<%= link_to 'Play', edit_game_path %>
-</br>
 <%= link_to 'Back', games_path %>
 </p>
 </br>
@@ -19,7 +17,7 @@ It is <%= @game.whose_turn.name %>'s turn to play
 </br>
 <table class="page">
   <tr>
-    <td class="no_border"><div class="playeravatar"><%= image_tag @game.player1.avatar.medium.url %></div></td>
+    <td class="no_border"><div class="playeravatar"><%= image_tag Character.first.playgif.medium.url %></div></td>
     <td class="no_border">
       <table class="tg">
         <tr>

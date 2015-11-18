@@ -1,11 +1,11 @@
 <%= form_for(@game) do |f| %>
 <div class="field">
-  <%= f.label :character_id %><br>
-  <%= f.select :character_id, Character.all.map {|c| [c.name, c.id] } %>
+  <%= f.label :player1_character_id %><br>
+  <%= f.select :player1_character_id, Character.all.map {|c| [c.name, c.id] } %>
 </div>
 <div class="field">
-  <%= f.label :character_id %><br>
-  <%= f.select :character_id, Character.all.map {|c| [c.name, c.id] } %>
+  <%= f.label :player2_character_id %><br>
+  <%= f.select :player2_character_id, Character.all.map {|c| [c.name, c.id] } %>
 </div>
-<%= f.button %>
+<%= f.submit %>
 <% end %>
