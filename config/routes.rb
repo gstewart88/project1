@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'games#index'
+  root 'games#home'
   resources :games
   resources :stages
 

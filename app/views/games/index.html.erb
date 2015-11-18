@@ -1,5 +1,7 @@
+<img alt="background" class="bg" src="http://static5.gamespot.com/uploads/original/536/5360430/2753139-15774024117_9026e0a43c_o.jpg">
 <h1>Listing Games</h1>
 <p><%= User.count %> players have played a total of <%= Game.count %> games</p>
+</br>
 <table class="gamedetails">
   <thead>
     <tr>
@@ -7,7 +9,6 @@
       <th>Turn</th>
     </tr>
   </thead>
-
   <tbody>
     <% @games.each do |game| %>
       <tr>
@@ -16,7 +17,8 @@
         <td><%= link_to 'Show', game %></td>
       </tr>
     <% end %>
-    <tr><%= link_to 'New Game', new_game_path %></tr>
-    <tr><%= link_to "New Stage", new_stage_path %></tr>
+    <tr><%= link_to 'New Game', new_game_path %></tr> | 
+    <tr><%= link_to "New Stage", new_stage_path %></tr> | 
+    <tr><%= link_to 'View Stages', stages_path %></tr>
   </tbody>
 </table>

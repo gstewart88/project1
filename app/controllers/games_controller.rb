@@ -23,7 +23,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    Game.create!(player1: User.first, player2: User.last)
+    Game.create!(game_params)
     redirect_to action: "show", id: Game.last.id
   end
 
@@ -36,7 +36,7 @@ class GamesController < ApplicationController
   end
 
   def game_params
-    params.require(:game).permit(:id)
+    params.require(:game).permit(:id, :player1_id, :player2_id, :player1_character_id, :player2_character_id)
   end
   
 end

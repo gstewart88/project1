@@ -1,3 +1,4 @@
+<div><%= image_tag @game.stage.stage_image.medium.url %></div>
 <p id="notice"><%= notice %></p>
 <h2>Tic Tac Toe</h2>
 </br>
@@ -17,7 +18,7 @@ It is <%= @game.whose_turn.name %>'s turn to play
 </br>
 <table class="page">
   <tr>
-    <td class="no_border"><div class="playeravatar"><%= image_tag Character.first.playgif.medium.url %></div></td>
+    <td class="no_border"><div class="playeravatar"><%= image_tag @game.player1_character.playgif.medium.url %></div></td>
     <td class="no_border">
       <table class="tg">
         <tr>
@@ -37,7 +38,7 @@ It is <%= @game.whose_turn.name %>'s turn to play
         </tr>
       </table>
     </td>
-    <td class="no_border"><div class="playeravatar2"><%= image_tag @game.player2.avatar.medium.url %></div></td>
+    <td class="no_border"><div class="playeravatar2"><%= image_tag @game.player2_character.playgif.medium.url %></div></td>
   </tr>
 </table>
 </br>

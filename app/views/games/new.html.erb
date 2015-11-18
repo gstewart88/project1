@@ -1,11 +1,27 @@
+<img alt="background" class="bg" src="http://static5.gamespot.com/uploads/original/536/5360430/2753139-15774024117_9026e0a43c_o.jpg">
 <%= form_for(@game) do |f| %>
+<div class="field">
+  <%= f.label :player1_id %><br>
+  <%= f.select :player1_id, User.all.map {|c| [c.name, c.id] } %>
+</div>
 <div class="field">
   <%= f.label :player1_character_id %><br>
   <%= f.select :player1_character_id, Character.all.map {|c| [c.name, c.id] } %>
+</div>
+
+<div class="field">
+  <%= f.label :player2_id %><br>
+  <%= f.select :player2_id, User.all.map {|c| [c.name, c.id] } %>
 </div>
 <div class="field">
   <%= f.label :player2_character_id %><br>
   <%= f.select :player2_character_id, Character.all.map {|c| [c.name, c.id] } %>
 </div>
-<%= f.submit %>
+<div class="field">
+  <%= f.label :stage_id %><br>
+  <%= f.select :stage_id, Stage.all.map {|c| [c.name, c.id] } %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>
